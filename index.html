@@ -95,7 +95,7 @@
       <h5>Calcule seu IMC</h5>
       <form>
         <label for="altura">Altura:</label>
-        <input class="u-full-width" type="number" pattern="[0-9]*" step="0.05" min="0.00" placeholder="1,75 m" id="altura">
+        <input class="u-full-width" type="number" pattern="[0-9]*" step="0.05" min="0.00" placeholder="175 cm" id="altura">
         <label for="peso">Peso:</label>
         <input class="u-full-width" type="number" pattern="[0-9]*" step="0.1" min="0.00" placeholder="65 kg" id="peso">
         <input class="button-primary u-full-width" type="button" onclick="calcular()" value="Calcular"></button>
@@ -128,7 +128,7 @@
     document.getElementById("obesidadesevera").setAttribute("hidden", true);
     document.getElementById("obesidademorbida").setAttribute("hidden", true);
 
-    var peso = document.getElementById("peso").value;
+    var peso = document.getElementById("peso").value / 100;
     var altura = document.getElementById("altura").value;
 
     var imc = (peso / (altura * altura)).toFixed(2);
