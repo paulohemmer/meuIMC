@@ -132,7 +132,8 @@
     var altura = document.getElementById("altura").value;
 
     var imc = (peso / (altura * altura)).toFixed(2);
-
+    scroll(0,0)
+  
     if (isNaN(imc)) {
       document.getElementById("erro").removeAttribute("hidden");
     } else {
