@@ -128,10 +128,10 @@
     document.getElementById("obesidadesevera").setAttribute("hidden", true);
     document.getElementById("obesidademorbida").setAttribute("hidden", true);
 
-    var peso = document.getElementById("peso").value / 100;
+    var peso = document.getElementById("peso").value;
     var altura = document.getElementById("altura").value;
 
-    var imc = (peso / (altura * altura)).toFixed(2);
+    var imc = (peso / ((altura * altura)/100)).toFixed(2);
     window.scrollTo(0, 0);
   
     if (isNaN(imc)) {
